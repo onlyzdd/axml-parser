@@ -42,9 +42,9 @@ public:
         utf8 = (header->flags & StringPoolHeader::UTF8_FLAG) != 0;
     }
 
-    static size_t decodeLength(const uint8_t* t, size_t len, size_t& size);
+    static size_t decodeLength(const uint8_t* t, size_t len, uint8_t & size);
 
-    static size_t decodeLength(const uint16_t* t, size_t len, size_t& size);
+    static size_t decodeLength(const uint16_t* t, size_t len, uint8_t & size);
 
     std::string getStringAtOffset(size_t offset) const;
 
